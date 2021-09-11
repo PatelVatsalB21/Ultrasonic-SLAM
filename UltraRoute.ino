@@ -47,7 +47,7 @@ void setup() {
 }
 
 void loop() {
-  delta_obstacle();
+  make_map();
 }
 
 void cal_coordinates(int abs_x , int abs_y){
@@ -150,121 +150,9 @@ void move_distance(int distance){
   }
 }
 
-
 void delta_obstacle(){
-  int frontDist = readUS();
-  int maxDist, prevDist, prev_angle, obs_length_r, obs_length_l;
   
-  for(int i=80; i>=10; i--){  
-    servo.write(i);
-    delay(10);
-    int distance = readUS();
-    if(distance > maxDist){
-      maxDist = distance;
-    }
-    
-    if(maxDist - prevDist > 30){
-//      Serial.println("Edge Detected");
-      const float DEG2RAD = PI / 180.0f;
-      obs_length_r = (int)(tan((prev_angle+1)*DEG2RAD) * frontDist);
-      break;
-    }
-//    Serial.println("minDist, maxDist, prevDist, prevAngle");
-//    Serial.println(frontDist);
-//    Serial.println(maxDist);
-//    Serial.println(prevDist);
-//    Serial.println(prev_angle);
-
-    prevDist = distance;
-    prev_angle = i;
-  }
-
-  for(int i=80; i<=170; i++){  
-    servo.write(i);
-    delay(10);
-    int distance = readUS();
-    if(distance > maxDist){
-      maxDist = distance;
-    }
-    
-    if(maxDist - prevDist > 30){
-//      Serial.println("Edge Detected");
-      const float DEG2RAD = PI / 180.0f;
-      obs_length_l = (int)(tan((prev_angle+1)*DEG2RAD) * frontDist);
-      break;
-    }
-//    Serial.println("minDist, maxDist, prevDist, prevAngle");
-//    Serial.println(frontDist);
-//    Serial.println(maxDist);
-//    Serial.println(prevDist);
-//    Serial.println(prev_angle);
-
-    prevDist = distance;
-    prev_angle = i;
-  }
-
-  if(obs_length_r > obs_length_l){
-    
-    turn_r();
-    move_distance(obs_length_r);
-    turn_l();
-    look_long_l();
-    
-    while(readUS() < obs_length_r){
-      move_f();
-    }
-    
-    move_s();
-    turn_l();
-    move_distance(obs_length_r);
-    turn_r();
-    
-  } else {
-    
-    turn_l();
-    move_distance(obs_length_l);
-    turn_r();
-    look_long_r();
-    
-    while(readUS() < obs_length_l){
-      move_f();
-    }
-    
-    move_s();
-    turn_r();
-    move_distance(obs_length_l);
-    turn_l();
-    
-  }
 }
-
-
-//void delta_obstacle(){
-//  int minDist = readUs();
-//  int maxDist, prevDist, prev_angle;
-//  
-//  for(int i=15;i<=165;i++){  
-//    servo.write(i);
-//    delay(10);
-//    int distance = readUS();
-//    if(distance < minDist){
-//      minDist = distance;
-//    } else if(distance > maxDist){
-//      maxDist = distance;
-//    }
-//
-//    if(maxDist - prevDist > 30){
-//      Serial.println("Edge Detected");
-//    }
-//
-//    prev_angle = i;
-//    
-//  }
-//  for(int i=165;i>15;i--){  
-//    servo.write(i);
-//    distance = calculateDistance();
-//  }
-//}
 
 
 void make_map(){
