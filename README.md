@@ -20,6 +20,15 @@ The concept of mapping is displayed in the above figure. Here we consider a car 
 
 
 ## Working
+
 ### Moving Horizontally
+
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Moving_h.png"/>
+
 Since we don't use encoders we cannot track how much the wheels travelled but we can access the uptime of the board(Arduino or ESP). Hence we can use the basic physics formula for distance, speed, and velocity. As we know the length of the car (L), we derived the time(T<sub>H</sub>) required to travel 1 block. We want to travel random distance x in the horizontal direction. Hence, we divided **x** by **L** to get the **number of blocks** and then multiplied with speed **S** to get the **time interval for which car should travel**.
+
+### Moving Horizontally
+
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Moving_v.png"/>
+
+The math behind the vertical movement is the same as the horizontal except replacing **L** with **H**.
