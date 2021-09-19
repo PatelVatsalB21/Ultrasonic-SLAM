@@ -42,3 +42,9 @@ Mapping of an environment is a complex mathematical work. We need to calculate t
 ### Mapping Algorithm
 
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Mapping.png"/>
+
+A mapping algorithm is a code that maps an entire unknown room. It starts with the approach of the top right corner. Hence it starts mapping from the top right corner of the room and maps the room in iterations of the loop on a trajectory as shown in the figure. The map is saved in form of a 2D array on the board. The 2D array has n rows and 3 columns as the dimensions. Here n rows are taken for n horizontal iterations. Also, 3 columns are used to store the reading of each iteration respectively.
+
+
+
+
