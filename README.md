@@ -46,5 +46,9 @@ Mapping of an environment is a complex mathematical work. We need to calculate t
 A mapping algorithm is a code that maps an entire unknown room. It starts with the approach of the top right corner. Hence it starts mapping from the top right corner of the room and maps the room in iterations of the loop on a trajectory as shown in the figure. The map is saved in form of a 2D array on the board. The 2D array has n rows and 3 columns as the dimensions. Here n rows are taken for n horizontal iterations. Also, 3 columns are used to store the reading of each iteration respectively.
 
 
+### Detailed Mapping Case
 
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Mapping_2.png"/>
+
+Here we are using a test case to demonstrate the working of the mapping algorithm. As shown above, the room has obstacles on four corners and this test case covers most of the critical edge cases. The car starts mapping from the top right corner of the room and maps till the end of the room in 7 iterations. Here we use 3 columns in the array to store values from each iteration as l,b and r. As shown b is used to store regular horizontal reading while l and r are used for storing extra spaces in the left and right directions of each iteration if available. Hence l and r are 0 for iterations 1,2,6,7 while they are measurable for 3,4,5. 
 
