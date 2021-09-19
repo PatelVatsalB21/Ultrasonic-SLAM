@@ -58,3 +58,11 @@ Here we are using a test case to demonstrate the working of the mapping algorith
 
 After the mapping, all the readings are stored in the 2D array and can be visualized. On visualization shape of the usable area of the room can be known. These results can be stored on the EEPROM memory of the board for later extraction. Also, the map can be serially printed on USB or can be transmitted if WiFi or Bluetooth is available.
 
+### Localisation
+
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Localisation.png"/>
+
+After mapping, the generated map can be used to move through the open area. But as we are not using any compass or gyro sensor, localisation is a special code that takes care of the direction of the car and moves throughout the mapped area in any angle direction and distance while keeping track of its orientation and current position which is the key feature of the SLAM.
+
+Localisation code finds the appropriate angle and distance of the destination location concerning its current orientation and position.
+
