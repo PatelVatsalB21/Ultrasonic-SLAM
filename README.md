@@ -34,6 +34,8 @@ Since we don't use encoders we cannot track how much the wheels travelled but we
 The math behind the vertical movement is the same as the horizontal except replacing **L** with **H**.
 
 ### Basics of Mapping
+
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Mapping_b.png"/>
 
+Mapping of an environment is a complex mathematical work. We need to calculate the distance travelled by the car from wall to wall until the ultrasonic sensor detects the wall. As we do not know the distance travelled but by the time passed in travelling distance so, we can get the distance travelled as derived in the figure. The calculation is similar for vertical distance too.
 
