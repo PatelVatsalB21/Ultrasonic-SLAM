@@ -32,3 +32,8 @@ Since we don't use encoders we cannot track how much the wheels travelled but we
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Moving_v.png"/>
 
 The math behind the vertical movement is the same as the horizontal except replacing **L** with **H**.
+
+### Basics of Mapping
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Mapping_b.png"/>
+
+
