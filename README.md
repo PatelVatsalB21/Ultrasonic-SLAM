@@ -39,3 +39,6 @@ The math behind the vertical movement is the same as the horizontal except repla
 
 Mapping of an environment is a complex mathematical work. We need to calculate the distance travelled by the car from wall to wall until the ultrasonic sensor detects the wall. As we do not know the distance travelled but by the time passed in travelling distance so, we can get the distance travelled as derived in the figure. The calculation is similar for vertical distance too.
 
+### Mapping Algorithm
+
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Mapping.png"/>
