@@ -17,3 +17,9 @@ Generally, SLAM is used for mapping and navigation of the environment. It is use
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/UltraSLAM%20Intro.png"/>
 
 The concept of mapping is displayed in the above figure. Here we consider a car with **L** and **W** dimensions for length and width. We also consider the speed of the car to be constant **S**. We map the room of dimensions **R<sub>L</sub>** and **R<sub>W</sub>**. Hence the room can be turned into a matrix of several blocks each representing area covered by the car. Matrix is made of **m** columns and **n** rows which can be calculated from shown formula.
+
+
+## Working
+### Moving Horizontally
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Moving_h.png"/>
+Since we don't use encoders we cannot track how much the wheels travelled but we can access the uptime of the board(Arduino or ESP). Hence we can use the basic physics formula for distance, speed, and velocity. As we know the length of the car (L), we derived the time(T<sub>H</sub>) required to travel 1 block. We want to travel random distance x in the horizontal direction. Hence, we divided **x** by **L** to get the **number of blocks** and then multiplied with speed **S** to get the **time interval for which car should travel**.
