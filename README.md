@@ -72,6 +72,8 @@ Localisation code finds the appropriate angle and distance of the destination lo
 
 Path tracing is the mode used for following the same path used while mapping the room. This mode covers the entire area of the room and can be used in various cleaning robots or security robots. 
 
+### Dynamic Obstacles
 
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Dynamic%20Obstacles.png"/>
 
-
+Practically after mapping the room, we move some of our belongings and furniture but that would not be updated in the map until mapped the room again. Sometimes it might be even some temporary items for which it is not feasible to map the entire room again. But this might cause obstacles in the calculated trajectory of the car. To avoid this delta function is used. It calculates edge distance, angle to the edge, and obstacle length(L). It also bypasses the obstacle itself, then returns on the calculated path and updates the calculation and the target time covered in passing the obstacle.
