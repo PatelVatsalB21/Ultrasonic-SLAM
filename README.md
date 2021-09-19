@@ -66,3 +66,12 @@ After mapping, the generated map can be used to move through the open area. But 
 
 Localisation code finds the appropriate angle and distance of the destination location concerning its current orientation and position.
 
+### Path tracing
+
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Path%20Tracing.png"/>
+
+Path tracing is the mode used for following the same path used while mapping the room. This mode covers the entire area of the room and can be used in various cleaning robots or security robots. 
+
+
+
+
