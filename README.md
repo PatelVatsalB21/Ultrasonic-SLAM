@@ -12,3 +12,8 @@ Generally, SLAM is used for mapping and navigation of the environment. It is use
 - 4 DC Motors and wheels
 - Basic car chassis
 - Battery 
+
+## Concept of the library
+<img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/UltraSLAM%20Intro.png"/>
+
+The concept of mapping is displayed in the above figure. Here we consider a car with **L** and **W** dimensions for length and width. We also consider the speed of the car to be constant **S**. We map the room of dimensions **R<sub>L</sub>** and **R<sub>W</sub>**. Hence the room can be turned into a matrix of several blocks each representing area covered by the car. Matrix is made of **m** columns and **n** rows which can be calculated from shown formula.
