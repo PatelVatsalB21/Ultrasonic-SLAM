@@ -81,6 +81,26 @@ Practically after mapping the room, we move some of our belongings and furniture
 - Basic car chassis
 - Battery 
 
+
+
 ### Circuit Diagram
 <img src="https://github.com/PatelVatsalB21/Ultrasonic-SLAM/blob/main/Images/Circuit%20Diagram.jpg"/>
 
+## Steps to use the code
+1. Download the file
+2. Open Arduino IDE and select the port
+3. Compile and Upload the file
+
+## Uses of files
+
+```UltraMap``` - It is used for initially mapping of the room.
+
+```UltraNav``` - It is used for free navigation and moving throughout the map.
+
+```UltraTrace``` - It is used for following the same path used while mapping.
+
+
+## How to extract map (For Arduino only)
+While using Arduino alone with the motors, there is no other logic board for processing. And the Arduino comes with limited memory and processing power. Due to this there is no channel for transmission of mapped matrix and also due to limited space it cannot be stored also on the board. There is an option to store map in the EEPROM memory of the board but the size of the map is the constraint. So the feasible solution is print the mapp array serially and copy it. 
+
+A possible breakthrough is to add a bluetooth or wifi module to the arduino and transmit the map to the connected device.
